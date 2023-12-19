@@ -1,0 +1,1743 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Orange HRM Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Dec 19, 2023 09:14:49 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Dec 19, 2023 09:14:49 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Dec 19, 2023 09:14:54 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>2</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='100%'><b>11</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='8%'><b>11</b> steps passed</small></div>
+<div>
+<small data-tooltip='8%'><b>11</b> steps failed,
+<b>102</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Login Test Cases":0.615,"User Test":0.519
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@author_Krupali</td>
+<td>0</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@regression</td>
+<td>0</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@smoke</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@sanity</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Engineer</td>
+<td>Krupali</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Orange HRM</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 11,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 11,
+failGrandChild: 11,
+warningGrandChild: 0,
+skipGrandChild: 102,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@author_Krupali</a><a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@smoke</a><a class="dropdown-item" href="#">@sanity</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login Test Cases</p>
+            <p class="text-sm">
+              <span>21:14:52</span> / <span>00:00:00:615</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Login Test Cases</h5>
+<span class='badge badge-success'>12.19.2023 21:14:52</span>
+<span class='badge badge-danger'>12.19.2023 21:14:53</span>
+<span class='badge badge-default'>00:00:00:615</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a User I want to Login Successfully</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify User Should Login SuccessFully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomepage()">
+                <span>Given I am on Homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(java.lang.String)">
+                <span>When I enter user name 'Admin'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name 'Admin'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/logintest.feature:8)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterPasswordAdmin123(java.lang.String)">
+                <span>And I enter password 'admin123'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnLoginButton()">
+                <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.verifyMessageOnPage(java.lang.String)">
+                <span>Then Verify "Dashboard" Message on page</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log fail-bg mr-2">Fail</span>Verify That The Logo Display On HomePage</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomepage()">
+                <span>Given I am on Homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(java.lang.String)">
+                <span>When I enter user name 'Admin'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name 'Admin'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/logintest.feature:16)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterPasswordAdmin123(java.lang.String)">
+                <span>And I enter password 'admin123'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnLoginButton()">
+                <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.verifyLogoIsDisplayed()">
+                <span>Then Verify Logo is Displayed</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log fail-bg mr-2">Fail</span>verifyUserShouldLogOutSuccessFully()</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomepage()">
+                <span>Given I am on Homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(java.lang.String)">
+                <span>When I enter user name 'Admin'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name 'Admin'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/logintest.feature:24)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterPasswordAdmin123(java.lang.String)">
+                <span>And I enter password 'admin123'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnLoginButton()">
+                <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnUserProfileLogo()">
+                <span>And I Click on User Profile logo</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iMouseHoverOnLogoutAndClick()">
+                <span>And I Mouse hover on 'Logout' and click</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.verifyTheTextLoginPanelIsDisplayed()">
+                <span>Then Verify the text 'Login Panel' is displayed</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">User Test</p>
+            <p class="text-sm">
+              <span>21:14:53</span> / <span>00:00:00:519</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">User Test</h5>
+<span class='badge badge-success'>12.19.2023 21:14:53</span>
+<span class='badge badge-danger'>12.19.2023 21:14:54</span>
+<span class='badge badge-default'>00:00:00:519</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a User I want to Login Successfully</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="23"><span class="badge log fail-bg mr-2">Fail</span>Verify Admin should add User Successfully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomepage()">
+                <span>Given I am on Homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(java.lang.String)">
+                <span>When I enter user name "Admin"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name "Admin"(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:8)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterPasswordAdmin123(java.lang.String)">
+                <span>And I enter password "admin123"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnLoginButton()">
+                <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnAdminTab()">
+                <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifySystemUsersText()">
+                <span>And I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnAddButton()">
+                <span>And I click on 'Add' Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifyAddUserTextOnThatField()">
+                <span>And I verify 'Add User' Text on that field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iSelectUserRoleAdmin()">
+                <span>And I select User Role 'Admin'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iEnterEmployeeNameLisa()">
+                <span>And I enter employee name 'Lisa'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iEnterUsernameJohnsmith(int)">
+                <span>And I  enter Username 'johnsmith1234567'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iSelectStatusDisable()">
+                <span>And I Select status 'Disable'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iEnterPasswordJohnInPasswordField(int)">
+                <span>And I  enter Password 'John@1234' in password field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iEnterConfirmPasswordJohn(int)">
+                <span>And I enter Confirm Password  'John@1234'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnSaveButtonOnPage()">
+                <span>And I  click On 'Save' Button on page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifyMessageSuccessfullySaved()">
+                <span>Then I verify message 'Successfully Saved'</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log fail-bg mr-2">Fail</span>Verify search The User which is Created</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomepage()">
+                <span>Given I am on Homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(java.lang.String)">
+                <span>When I enter user name "Admin"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name "Admin"(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:27)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterPasswordAdmin123(java.lang.String)">
+                <span>And I enter password "admin123"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnLoginButton()">
+                <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnAdminTab()">
+                <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifySystemUsersText()">
+                <span>And I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iEnterUsernameJohnsmithInUsernameField(int)">
+                <span>And I  enter Username 'johnsmith1234567' in username field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iSelectStatusDisable()">
+                <span>And I Select status 'Disable'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnSearchButtonInSearchField()">
+                <span>And I click On 'Search' Button in search field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifyUserShouldBeInResultList()">
+                <span>Then I Verify User should be in Result List</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="51"><span class="badge log fail-bg mr-2">Fail</span>Verify That Admin Should Delete The User SuccessFully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomepage()">
+                <span>Given I am on Homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(java.lang.String)">
+                <span>When I enter user name "Admin"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name "Admin"(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:40)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterPasswordAdmin123(java.lang.String)">
+                <span>And I enter password "admin123"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnLoginButton()">
+                <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnAdminTab()">
+                <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifySystemUsersText()">
+                <span>And I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iEnterUsernameJohnsmithInUsernameField(int)">
+                <span>And I  enter Username 'johnsmith1234567' in username field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iSelectStatusDisable()">
+                <span>And I Select status 'Disable'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnSearchButtonInSearchField()">
+                <span>And I click On 'Search' Button in search field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifyUserShouldBeInResultList()">
+                <span>And I Verify User should be in Result List</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnCheckBox()">
+                <span>And Click on Check box</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnDeleteButtonInDeleteField()">
+                <span>And Click on Delete Button in delete field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.popupWillDisplay()">
+                <span>And Popup will display</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnOkButtonOnPopup()">
+                <span>And Click on Ok Button on Popup</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.verifyMessageSuccessfullyDeletedUserDeleted()">
+                <span>Then verify message 'Successfully Deleted' user deleted</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="67"><span class="badge log fail-bg mr-2">Fail</span>Search The Deleted User And Verify The Message NoRecordFound</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomepage()">
+                <span>Given I am on Homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(java.lang.String)">
+                <span>When I enter user name '<username>'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name '<username>'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:58)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iEnterPasswordAdmin123(java.lang.String)">
+                <span>And I enter password "admin123"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iClickOnLoginButton()">
+                <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnAdminTab()">
+                <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iVerifySystemUsersText()">
+                <span>And I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iEnterUsernameJohnsmithInUsernameField(int)">
+                <span>And I  enter Username "johnsmith1234567" in username field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iSelectStatusDisable()">
+                <span>And I Select status '<Status>'</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.iClickOnSearchButtonInSearchField()">
+                <span>And I click On 'Search' Button in search field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.verifyMessageNoRecordsFound()">
+                <span>Then Verify message 'No Records Found'</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="78"><span class="badge log fail-bg mr-2">Fail</span>searchTheUserAndVerifyTheMessageRecordFound</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="79"><span class="badge log fail-bg mr-2">Fail</span>searchTheUserAndVerifyTheMessageRecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given I am on Homepage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When I enter user name 'Admin'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name 'Admin'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:71)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I enter password 'admin123'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter Username 'Admin'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select User Role 'Admin'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter EmployeeName 'Paul Collings'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select Status 'Enable'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on 'Search Button'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify message '(1) Record Found'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify username '<username>'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="94"><span class="badge log fail-bg mr-2">Fail</span>searchTheUserAndVerifyTheMessageRecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given I am on Homepage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When I enter user name 'Admin'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name 'Admin'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:71)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I enter password 'admin123'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter Username 'Cassidy.Hope'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select User Role 'ESS'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter EmployeeName 'Cassidy Hope'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select Status 'Enable'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on 'Search Button'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify message '(1) Record Found'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify username '<username>'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="109"><span class="badge log fail-bg mr-2">Fail</span>searchTheUserAndVerifyTheMessageRecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given I am on Homepage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When I enter user name 'Admin'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name 'Admin'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:71)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I enter password 'admin123'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter Username 'Nina.Patel'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select User Role 'ESS'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter EmployeeName 'Nina Patel'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select Status 'Enable'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on 'Search Button'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify message '(1) Record Found'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify username '<username>'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="124"><span class="badge log fail-bg mr-2">Fail</span>searchTheUserAndVerifyTheMessageRecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given I am on Homepage</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When I enter user name 'Admin'</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:75)
+	at com.orangehrmlive.demo.pages.LoginPage.enterUsername(LoginPage.java:59)
+	at com.orangehrmlive.demo.steps.LoginSteps.iEnterUserNameAdmin(LoginSteps.java:19)
+	at ✽.I enter user name 'Admin'(file:///C:/Users/ahirg/IdeaProjects/project-2-orange-hrm-sw-6-krupali-lalkia/src/test/resources/features/usertest.feature:71)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I enter password 'admin123'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click On Admin Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then I Verify 'System Users' Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter Username 'Odis.Adalwin'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select User Role 'Admin'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Enter EmployeeName 'Odis Adalwin'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select Status 'Enable'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on 'Search Button'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify message '(1) Record Found'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify username '<username>'</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>11</span>
+</span>
+<p class="name">@author_Krupali</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@author_Krupali</h4>
+<span status="fail" class='badge log badge-danger'>11 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify User Should Login SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify User Should Login SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Verify That The Logo Display On HomePage</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify That The Logo Display On HomePage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>verifyUserShouldLogOutSuccessFully()</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.verifyUserShouldLogOutSuccessFully()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='23'>Verify Admin should add User Successfully</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify Admin should add User Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='40'>Verify search The User which is Created</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify search The User which is Created</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='51'>Verify That Admin Should Delete The User SuccessFully</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify That Admin Should Delete The User SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='67'>Search The Deleted User And Verify The Message NoRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.Search The Deleted User And Verify The Message NoRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='79'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='94'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='109'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='124'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>11</span>
+</span>
+<p class="name">@regression</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@regression</h4>
+<span status="fail" class='badge log badge-danger'>11 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify User Should Login SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify User Should Login SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Verify That The Logo Display On HomePage</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify That The Logo Display On HomePage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>verifyUserShouldLogOutSuccessFully()</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.verifyUserShouldLogOutSuccessFully()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='23'>Verify Admin should add User Successfully</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify Admin should add User Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='40'>Verify search The User which is Created</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify search The User which is Created</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='51'>Verify That Admin Should Delete The User SuccessFully</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify That Admin Should Delete The User SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='67'>Search The Deleted User And Verify The Message NoRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.Search The Deleted User And Verify The Message NoRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='79'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='94'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='109'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='124'>searchTheUserAndVerifyTheMessageRecordFound</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Verify That The Logo Display On HomePage</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify That The Logo Display On HomePage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='23'>Verify Admin should add User Successfully</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify Admin should add User Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='40'>Verify search The User which is Created</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify search The User which is Created</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@sanity</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@sanity</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify User Should Login SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify User Should Login SuccessFully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>11</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>11 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='4'>When I enter user name 'Admin'</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify User Should Login SuccessFully.When I enter user name 'Admin'</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>When I enter user name 'Admin'</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.Verify That The Logo Display On HomePage.When I enter user name 'Admin'</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>When I enter user name 'Admin'</a>
+<div class="">
+<span class="badge badge-default">Login Test Cases.verifyUserShouldLogOutSuccessFully().When I enter user name 'Admin'</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='25'>When I enter user name "Admin"</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify Admin should add User Successfully.When I enter user name "Admin"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='42'>When I enter user name "Admin"</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify search The User which is Created.When I enter user name "Admin"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='53'>When I enter user name "Admin"</a>
+<div class="">
+<span class="badge badge-default">User Test.Verify That Admin Should Delete The User SuccessFully.When I enter user name "Admin"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='69'>When I enter user name '<username>'</a>
+<div class="">
+<span class="badge badge-default">User Test.Search The Deleted User And Verify The Message NoRecordFound.When I enter user name '<username>'</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='81'>When I enter user name 'Admin'</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound.When I enter user name 'Admin'</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='96'>When I enter user name 'Admin'</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound.When I enter user name 'Admin'</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='111'>When I enter user name 'Admin'</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound.When I enter user name 'Admin'</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:14:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='126'>When I enter user name 'Admin'</a>
+<div class="">
+<span class="badge badge-default">User Test.searchTheUserAndVerifyTheMessageRecordFound.When I enter user name 'Admin'</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
